@@ -81,8 +81,9 @@ def printTopMost(frequencies, n):
     while count < n and count < len(frequencies):
         limitedList.append(sortedList[count])
         count += 1
-    # skriver ut listan (inte perfekt)
+    # skriver ut listan
     for word in limitedList:
-        result = str(word[0]) + '\t' + str(word[1]) #+ '\n'
+        # används ljust och rjust för att printa orden på rätt sätt
+        result = str(word[0]).ljust(15)+str(word[1]).rjust(10)
         print(result)
     
